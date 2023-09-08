@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  frontend:
+    image: frontend
+    container_name: Front-generic
+    ports:
+      - 8000:8000
+    depends_on:
+      - backend
+  backend:
+    build:
+      context: ./backend-generic
+      dockerfile: Dockerfile
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    ports:
+      - "3000:3000"
+    container_name: Back-generic
+    volumes:
+      - ./backend-generic:/app
