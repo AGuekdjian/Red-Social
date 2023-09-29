@@ -1,6 +1,6 @@
 ## Descripción del Proyecto
 
-🚀 ¡Llegó el momento de presentar este proyecto! He construido esta aplicación red social desde cero, utilizando los conocimientos adquiridos en el programa Certified Tech Developer de Digital House. Desarrollamos tanto el frontend en React como el backend en Node.js y Express. Utilizamos MongoDB con Mongoose para la gestión de la base de datos. La aplicación permite el registro y login de usuarios, así como la personalización de sus perfiles y la creación de publicaciones.
+🚀 He construido esta aplicación red social desde cero, utilizando los conocimientos adquiridos en el programa Certified Tech Developer de Digital House. Desarrollamos tanto el frontend en React como el backend en Node.js y Express. Utilizamos MongoDB con Mongoose para la gestión de la base de datos. La aplicación permite el registro y login de usuarios, así como la personalización de sus perfiles y la creación de publicaciones.
 
 ## Características Principales
 
