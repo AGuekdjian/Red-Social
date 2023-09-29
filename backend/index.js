@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 
 // Mensaje bienvenida
-console.log("API NODE para RED SOCIAL arrancada!!");
+console.log("API REST con NODE para RED SOCIAL: Iniciada!!");
 
 // Conexion a bbdd
 connection();
@@ -30,13 +30,11 @@ app.use("/api/publication", PublicationRoutes);
 app.use("/api/follow", FollowRoutes);
 
 // Ruta de prueba
-app.get("/ruta-prueba", (req, res) => {
+app.get("/api", (req, res) => {
     
     return res.status(200).json(
         {
-            "id": 1,
-            "nombre": "Victor",
-            "web": "victorroblesweb.es"
+            "status": "Api funcionando!!",
         }
     );
 

@@ -4,7 +4,7 @@
     "description": "API REST con Node, Mongo, Express, JWT para una red social",
     "main": "index.js",
     "scripts": {
-      "start": "nodemon index.js"
+      "start": "node index.js"
     },
     "author": "Anthony Guekdjian",
     "license": "MIT",

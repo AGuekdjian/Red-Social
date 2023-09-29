@@ -2,21 +2,22 @@ version: "3.8"
 services:
   frontend:
     image: frontend
-    container_name: Front-generic
+    container_name: Front-red-social
     ports:
       - 8000:8000
     depends_on:
       - backend
   backend:
-    build:
-      context: ./backend-generic
-      dockerfile: Dockerfile
+    image: backend
+    environment:
+      PORT: "3000"
+      USER_DB: "aguekdjian"
+      NAME_DB: "red-social"
+      PASSWORD_DB: "b5a1453zxk"
+    container_name: Back-api-red-social
     logging:
       options:
         max-size: "10m"
         max-file: "3"
     ports:
       - "3000:3000"
-    container_name: Back-generic
-    volumes:
-      - ./backend-generic:/app
