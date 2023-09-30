@@ -8,13 +8,13 @@ check_exit_code() {
 }
 
 echo "***** Creando imagen de Frontend *****"
-cd ./frontend && docker build -t frontend:1.0 . && cd ..
+cd ./frontend && sudo docker build -t frontend:2.0 . && cd ..
 check_exit_code "cd ./frontend && docker build -t frontend:1.0 . && cd .."
 
 echo "***** Creando imagen de Backend *****"
-cd ./backend && docker build -t backend:1.0 . && cd ..
+cd ./backend && sudo docker build -t backend:2.0 . && cd ..
 check_exit_code "cd ./backend && docker build -t backend:1.0 . && cd .."
 
 echo "***** Creando y levantando contenedor *****"
-docker-compose up -d --build
+sudo docker compose up -d --build
 check_exit_code "docker-compose up -d --build"
