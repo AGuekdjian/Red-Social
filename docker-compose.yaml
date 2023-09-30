@@ -1,16 +1,16 @@
 version: "3.8"
 services:
   frontend:
-    image: frontend
+    image: frontend:2.0
     container_name: Front-red-social
     ports:
       - 8000:8000
     depends_on:
       - backend
   backend:
-    image: backend
+    image: backend:2.0
     environment:
-      PORT: "3000"
+      PORT: "3001"
       USER_DB: "aguekdjian"
       NAME_DB: "red-social"
       PASSWORD_DB: "b5a1453zxk"
@@ -20,4 +20,4 @@ services:
         max-size: "10m"
         max-file: "3"
     ports:
-      - "3000:3000"
+      - "3001:3001"
