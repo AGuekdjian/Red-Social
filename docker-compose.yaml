@@ -1,16 +1,20 @@
 version: "3.8"
 services:
   frontend:
-    image: frontend:2.0
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     container_name: Front-red-social
     ports:
       - 8000:8000
     depends_on:
       - backend
   backend:
-    image: backend:2.0
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     environment:
-      PORT: "3001"
+      PORT: "3000"
       USER_DB: "aguekdjian"
       NAME_DB: "red-social"
       PASSWORD_DB: "b5a1453zxk"
@@ -20,4 +24,4 @@ services:
         max-size: "10m"
         max-file: "3"
     ports:
-      - "3001:3001"
+      - "3000:3000"
